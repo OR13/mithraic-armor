@@ -1,0 +1,29 @@
+{
+  "name": "mithraic-armor",
+  "version": "1.0.0",
+  "description": "A weekend project to explore cose.",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "node ./src/__tests__/custom.test.js",
+    "shove": "git add -A; git commit -m ':rocket:'; git push origin main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OR13/mithraic-armor.git"
+  },
+  "author": "Orie Steele",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/OR13/mithraic-armor/issues"
+  },
+  "homepage": "https://github.com/OR13/mithraic-armor#readme",
+  "dependencies": {
+    "cose-js": "^0.8.4",
+    "yargs": "^17.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "eslint-config-google": "^0.14.0",
+    "prettier": "^2.7.1"
+  }
+}
