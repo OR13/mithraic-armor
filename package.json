@@ -5,7 +5,15 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "node ./src/__tests__/custom.test.js",
-    "shove": "git add -A; git commit -m ':rocket:'; git push origin main"
+    "shove": "git add -A; git commit -m ':rocket:'; git push origin main",
+    "go:build": "go build -o ./bin/main ./src/main.go",
+    "prego:test": "npm run go:build",
+    "go:test": "./bin/main",
+    "go:build:wasm": "GOOS=js GOARCH=wasm go build -o ./bin/main.wasm  ./src/main.go",
+    "prego:test:wasm:web": "npm run go:build:wasm ; cat $(go env GOROOT)/misc/wasm/wasm_exec.js > ./bin/wasm_exec.js",
+    "go:test:wasm:web": "npx serve ./bin",
+    "prego:test:wasm:node": "npm run go:build:wasm ; cat $(go env GOROOT)/misc/wasm/wasm_exec.js > ./bin/wasm_exec.js",
+    "go:test:wasm:node": "node  ./bin/go_js_wasm_exec.js ./bin/main.wasm  "
   },
   "repository": {
     "type": "git",
