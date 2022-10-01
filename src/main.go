@@ -4,6 +4,7 @@ package main
 	
 import (
     "fmt"
+    "os"
     "github.com/veraison/go-cose"
 	"crypto/ecdsa"
 	"crypto/elliptic"
@@ -13,11 +14,13 @@ import (
 
 func main() {
     
+    fmt.Println( os.Args )
+    
     var messageStr = "🌈 I wear the Armor of Mithras and the Light."
 
     var messageBytes = []byte(messageStr)
 
-    // fmt.Println( messageStr )
+  
 
     privateKey, _ := ecdsa.GenerateKey(elliptic.P521(), rand.Reader)
     signer, _ := cose.NewSigner(cose.AlgorithmES512, privateKey)
