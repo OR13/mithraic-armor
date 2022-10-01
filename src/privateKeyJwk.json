@@ -1,0 +1,9 @@
+{
+  "kid": "urn:ietf:params:oauth:jwk-thumbprint:sha-256:PWieDT0tQrlUu_YiggAjPhcLYrFmQRxKxstEhH2E7bY",
+  "kty": "EC",
+  "crv": "P-521",
+  "alg": "ES512",
+  "x": "AbYsupr2HVrjj-rxRHFuFOoTzjfYJhoMPJHjd6ZoAJu-f4G3j9YkpGZGW03zIbfpB-h4Sa8xp80umXUrwOLNw7ij",
+  "y": "AeUJ7n0jk9IwCIZYDTMcZ9Kj4NsDb1SZqBufpbz6CMIciyixMLJjQx5xwLWMLhVDCs-iw3EQnrho6CrRWgqlqQ6p",
+  "d": "AVNjoYJ2sPUjNzk_7jvQ9KooE6qBjoPv2p7vk1WXgTSaY-tWSfmIdr3j6HI9b1oAY8s5qbxrpdG4aOqehMPuouTO"
+}

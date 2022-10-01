@@ -8,7 +8,7 @@
     "shove": "git add -A; git commit -m ':rocket:'; git push origin main",
     "go:build": "go build -o ./bin/main ./src/main.go",
     "prego:test": "npm run go:build",
-    "go:test": "./bin/main",
+    "go:test": "./bin/main $(cat ./src/privateKeyJwk.json | jq -c)",
     "go:build:wasm": "GOOS=js GOARCH=wasm go build -o ./bin/main.wasm  ./src/main.go",
     "prego:test:wasm:web": "npm run go:build:wasm ; cat $(go env GOROOT)/misc/wasm/wasm_exec.js > ./bin/wasm_exec.js",
     "go:test:wasm:web": "npx serve ./bin",
@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/OR13/mithraic-armor#readme",
   "dependencies": {
+    "@or13/did-jwk": "^0.0.3",
     "cose-js": "^0.8.4",
     "yargs": "^17.5.1"
   },
