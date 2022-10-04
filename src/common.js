@@ -71,10 +71,14 @@ const HeaderParameters = {
   ephemeral_key: -1,
   alg: 1,
   crit: 2,
+
+  // https://github.com/veraison/go-cose/issues/105
+  // https://github.com/veraison/go-cose/blob/ebba05d25c1dc9a5eed3acf25446b7931291e1f4/headers_test.go#L31
+
   content_type: 3,
   ctyp: 3, // one could question this but it makes testing easier
-  // https://github.com/veraison/go-cose/blob/ebba05d25c1dc9a5eed3acf25446b7931291e1f4/headers_test.go#L31
-  cty: 42,
+  cty: 3,
+
   kid: 4,
   IV: 5,
   Partial_IV: 6,
